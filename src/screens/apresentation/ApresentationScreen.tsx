@@ -1,10 +1,11 @@
 
 import React, { useRef, useState } from 'react'
 import { View, Text, FlatList, ImageSourcePropType, Dimensions, ViewToken, StyleSheet, Pressable } from 'react-native'
-import RowApresentation from '@/components/row-apresentation/RowApresentation'
+import RowApresentation from '@/components/row_apresentation/RowApresentation'
 import { Path, Svg } from 'react-native-svg'
 import theme from '@/themes/theme'
 import { styles } from "./apresentation.style"
+import useApresentaionViewModel from '@/view_models/ApresentationViewModel'
 
 
 export interface IDataApresentation {
@@ -14,7 +15,7 @@ export interface IDataApresentation {
   image: ImageSourcePropType
 }
 
-const bgs = ['#A5BBFF', '#DDBEFE', '#FF63ED'];
+
 const data: IDataApresentation[] = [
   {
     "key": "3571572",
@@ -37,25 +38,14 @@ const data: IDataApresentation[] = [
   },
 ]
 
-interface ViewSliderProps {
-  viewableItems: ViewToken[];
-  changed: ViewToken[];
-}
+
 
 //fazer onda 
 //https://getwaves.io/
 
 
 export default function ApresentationScreen() {
-  const [currentBg, setCurrentBg] = useState(bgs[0])
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-
-  const handleRow = useRef((info: ViewSliderProps) => {
-    const index = info.viewableItems[0].index!
-    setCurrentBg(bgs[index])
-    setCurrentIndex(index)
-  })
+  const { currentBg, handleRow, currentIndex, navigateToHome } = useApresentaionViewModel()
 
   return (
     <View style={{ flex: 1, backgroundColor: theme.colors.primary }}>
@@ -83,13 +73,12 @@ export default function ApresentationScreen() {
       </View>
       {
         currentIndex === data.length - 1 ?
-          <Pressable style={styles.button}   >
-            <Text style={styles.textButton}>Vamos la !</Text>
+          <Pressable style={styles.button} onPress={navigateToHome}>
+            <Text style={styles.textButton}>Vamos la ?</Text>
           </Pressable>
           :
           <View style={{ height: 75 }} />
       }
-
     </View>
   )
 }

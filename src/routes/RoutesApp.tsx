@@ -1,10 +1,10 @@
+import { RoutesModel } from "@/model/RoutesModel";
 import ApresentationScreen from "@/screens/apresentation/ApresentationScreen";
 import HomeScreen from "@/screens/home/HomeScreen";
-import ConstantsRoutes from "@/utils/ConstantsRoute";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
-const { Navigator, Screen } = createNativeStackNavigator()
+const { Navigator, Screen } = createNativeStackNavigator<RoutesModel>()
 
 
 
@@ -13,8 +13,8 @@ export default function RoutesApp() {
       <Navigator screenOptions={{
          headerShown: false
       }}>
-         <Screen name={ConstantsRoutes.apresentation} component={ApresentationScreen} />
-         <Screen name={ConstantsRoutes.home} component={HomeScreen} />
+         <Screen name="Apresentation" component={ApresentationScreen} />
+         <Screen name="Home" component={HomeScreen} />
       </Navigator>
 
    )

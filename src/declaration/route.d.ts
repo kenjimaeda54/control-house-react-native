@@ -1,9 +1,8 @@
-import ConstantsRoutes from "@/utils/ConstantsRoute";
+import { RoutesModel } from "@/model/RoutesModel";
 
 
-declare global { 
+declare global {
   namespace ReactNavigation {
-    type RoutesType = typeof ConstantsRoutes
-    interface RootParamList extends RoutesType {}
+    interface RootParamList extends RoutesModel { }
   }
 }

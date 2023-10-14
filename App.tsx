@@ -1,12 +1,12 @@
-import { ThemeProvider } from "@emotion/react";
 import theme from "@/themes/theme"
-import HomeScreen from "@/screens/home/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import RoutesApp from "@/routes/RoutesApp";
 
 
-export default function App() { 
-   return ( 
-    <ThemeProvider theme={theme}>
-       <HomeScreen />
-    </ThemeProvider>
+export default function App() {
+   return (
+      <NavigationContainer>
+         <RoutesApp />
+      </NavigationContainer>
    )
 }

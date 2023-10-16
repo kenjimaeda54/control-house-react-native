@@ -1,9 +1,7 @@
-import theme from "@/themes/theme";
-import { Dimensions, StyleSheet } from "react-native";
+import theme from '@/themes/theme'
+import { Dimensions, StyleSheet } from 'react-native'
 
-
-const { width } = Dimensions.get("window")
-
+const { width } = Dimensions.get('window')
 
 export const styles = StyleSheet.create({
   container: {
@@ -29,8 +27,5 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 25,
     color: theme.colors.white,
-  }
-
+  },
 })
-
-

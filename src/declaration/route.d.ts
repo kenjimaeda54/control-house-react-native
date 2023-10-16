@@ -1,8 +1,7 @@
-import { RoutesModel } from "@/model/RoutesModel";
-
+import { RoutesModel } from '@/model/RoutesModel'
 
 declare global {
   namespace ReactNavigation {
-    interface RootParamList extends RoutesModel { }
+    interface RootParamList extends RoutesModel {}
   }
 }

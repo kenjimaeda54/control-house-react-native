@@ -1,14 +1,14 @@
-import theme from "@/themes/theme";
-import { Dimensions, StyleSheet } from "react-native";
+import theme from '@/themes/theme'
+import { Dimensions, StyleSheet } from 'react-native'
 
-const { width } = Dimensions.get("screen")
+const { width } = Dimensions.get('screen')
 
 export const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    width: "100%"
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
   },
   checkBox: {
     width: 20,
@@ -22,6 +22,6 @@ export const styles = StyleSheet.create({
     fontSize: 17,
     color: theme.colors.white,
     width: width - 100,
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 })

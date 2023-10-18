@@ -4,9 +4,9 @@ import { Modalize } from 'react-native-modalize'
 import { IHandles } from 'react-native-modalize/lib/options'
 
 export enum TypeFeature {
-  toggle = "toggle",
-  upDelayDown = "upDelayDown",
-  delayUp = "dealyUP",
+  toggle,
+  upDelayDown,
+  delayUp,
 }
 
 interface IHomeViewModel {

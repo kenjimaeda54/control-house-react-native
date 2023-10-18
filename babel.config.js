@@ -13,13 +13,15 @@ module.exports = {
           '@/global': './src/global',
           '@/utils': './src/utils',
           '@/themes': './src/themes',
+          '@/stores': './src/stores',
           '@/models': './src/models',
           '@/mock': './src/mock',
           '@/view_models': './src/view_models',
           '@/services': './src/services',
           '@/test': './src/test',
           '@/server': './src/test/server',
-          '@/client': './src/client',
+          '@/client': './src/client'
+        
         },
         extensions: [
           '.js',

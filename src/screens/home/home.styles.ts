@@ -51,19 +51,5 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: theme.colors.gray100,
   },
-  buttonSubmit: {
-    backgroundColor: '#FF63ED',
-    borderRadius: 7,
-    paddingHorizontal: 5,
-    paddingVertical: 10,
-    width: "100%",
-    position: "absolute",
-    bottom: 50,
-    alignItems: "center"
-  },
-  textButtonSubmit: {
-    fontFamily: theme.fonts.light,
-    fontSize: 16,
-    color: theme.colors.primary,
-  }
+
 })

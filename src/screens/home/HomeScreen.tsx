@@ -16,6 +16,7 @@ import useHomeViewModel, {
   TypeFeature,
 } from '@/view_models/HomeViewModel'
 import theme from '@/themes/theme'
+import ButtonCommon from '@/components/button_common/ButtonCommon'
 
 export default function HomeScreen() {
   const {
@@ -89,9 +90,7 @@ export default function HomeScreen() {
           </View>
         </View>
       </Modalize>
-      <TouchableOpacity onPress={handleNavigate} disabled={feature === null} activeOpacity={0.7} style={[styles.buttonSubmit, { opacity: feature === null ? 0.5 : 1 }]}>
-        <Text style={styles.textButtonSubmit}>Começar</Text>
-      </TouchableOpacity>
+      <ButtonCommon text={"Começar"} onPress={handleNavigate} disabled={feature === null} style={{ opacity: feature === null ? 0.5 : 1 }} />
     </View >
   )
 }

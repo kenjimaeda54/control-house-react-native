@@ -1,6 +1,6 @@
 import { RoutesModel } from '@/model/RoutesModel'
 import ApresentationScreen from '@/screens/apresentation/ApresentationScreen'
-import Feature from '@/screens/feature/Feature'
+import Feature from '@/screens/feature/FeatureScreen'
 import HomeScreen from '@/screens/home/HomeScreen'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 

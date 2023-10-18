@@ -1,14 +1,10 @@
 import { api } from "./api";
 
-enum HttpFailure {
-  badeResponse
-}
 
 
 
 export interface HttpResponse<T> {
-  response: T | HttpFailure
-
+  response: T
 }
 
 
@@ -20,6 +16,7 @@ class ControlHouseService {
       let responseApi = await api.post("/toggle", {
         status
       })
+
       if (responseApi.data.status === "Success") {
         let status: HttpResponse<boolean> = {
           response: true
@@ -27,14 +24,58 @@ class ControlHouseService {
         return completion(status)
       }
     } catch (error) {
-      console.log(error)
+      console.log(JSON.stringify(error))
       let status: HttpResponse<boolean> = {
-        response: HttpFailure.badeResponse
+        response: false
       }
       completion(status)
     }
   }
 
+  async delayUp(time: number, completion: (response: HttpResponse<boolean>) => void) {
+    try {
+      let responseApi = await api.post("/timer_on_off", {
+        status: 0,
+        time,
+      })
+
+      if (responseApi.data.status === "Success") {
+        let status: HttpResponse<boolean> = {
+          response: true
+        }
+        return completion(status)
+      }
+
+    } catch (error) {
+      let status: HttpResponse<boolean> = {
+        response: false
+      }
+      completion(status)
+    }
+  }
+
+
+  async delayDown(time: number, completion: (response: HttpResponse<boolean>) => void) {
+    try {
+      let responseApi = await api.post("/timer_on_off", {
+        status: 1,
+        time,
+      })
+
+      if (responseApi.data.status === "Success") {
+        let status: HttpResponse<boolean> = {
+          response: true
+        }
+        return completion(status)
+      }
+
+    } catch (error) {
+      let status: HttpResponse<boolean> = {
+        response: false
+      }
+      completion(status)
+    }
+  }
 
 }
 

@@ -1,12 +1,11 @@
 # Control House
-Uma pequena aplicao para controlar saidas GPIO de raspbery, com este sowftare pode realizara toggle(acender e apagar),apagar apos alguns seundos e acender apos alguns segundos
+Uma pequena aplicação para controlar saídas GPIO do raspbery, com este sowftare pode realizar toggle(acender e apagar), apagar após alguns segundos é acender após alguns segundos
 
-
-## Servico
-Servico foi construido no Node Red, [referencia](https://github.com/kenjimaeda54/control-house-node-red)
+## Serviço
+Serviço foi construído no Node Red [referencia](https://github.com/kenjimaeda54/control-house-node-red)
 
 ## Feature
-- Decedi usar StyleeSheet na construcao das intefaces, com a nova arquitetura em React Native, senti deficiencia com Styled Componentes e Emotion
+- Decidi usar StyleeSheet na construção das interfaces, com a nova arquitetura em React Native, senti deficiência com Styled Componentes e Emotion
 - Para criar os efeitos de onda instalei o react native svg e utilizaei [waves](https://getwaves.io/) para construir o svg
 
 ```typescript

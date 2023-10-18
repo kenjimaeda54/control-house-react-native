@@ -25,7 +25,7 @@ export default function FeatureScreen() {
           <ButtonCommon onPress={handleFeatureToogle} text={textButton} />
         </View>
         :
-        <Text style={styles.textFeature}  >{textFeature}</Text>
+        <Text style={styles.textFeature}>{textFeature}</Text>
       }
 
     </View >

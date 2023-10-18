@@ -25,3 +25,6 @@ d='M0,320L48,288C96,256,192,192,288,186.7C384,181,480,235,576,245.3C672,256,768,
 
 
 ```
+
+## Publicação
+[Linkedin](https://www.linkedin.com/posts/kenjimaeda1233_iot-reactnative-javascript-activity-7120458424361885696-EL6e?utm_source=share&utm_medium=member_desktop)

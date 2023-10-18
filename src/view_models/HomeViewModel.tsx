@@ -41,7 +41,7 @@ export default function useHomeViewModel(): IHomeViewModel {
   function handleNavigate() {
     navigate('Feature', {
       feature: feature!,
-      time: feature === "toggle" ? null : currentTime
+      time: feature === TypeFeature.toggle ? null : currentTime
     })
   }
 
